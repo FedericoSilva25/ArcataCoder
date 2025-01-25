@@ -1,0 +1,14 @@
+header {/*aca poner el codigo para estilizar segun wireframe*/}
+
+main{/*aca poner el codigo para estilizar segun wireframe*/}
+main div .imagen-fondo {/*ejemplo de class*/margin-left: auto;}
+
+main p {color: blueviolet;}
+h1{background-color: brown;}
+h2 {font-weight: bold;}
+
+/*ejemplos de selector footer*/ /*agregar codigo para estilizar segun wireframe*/
+footer {color: #090909; text-align: left; } 
+footer ul { margin: 0; } 
+/*ejemplos de especifidad*/
+footer ul li { margin-right: 20px; } footer ul li h2 { font-size: 18px; margin-bottom: 10px; } 
