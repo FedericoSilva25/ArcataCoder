@@ -2,44 +2,92 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../Css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos - Arcata</title>
 </head>
 <body>
-    <header> <ul><nav>  <li><img src="../Img/logo para bordar.jpg" alt="Logo"></li> <li><a href="../index.html">Inicio</a></li> 
-        <li><a href="../Pages/productos.html">Productos</a></li>
-         <li><a href="../Pages/sobrenosotros.html">Sobre nosotros</a></li> 
-         <li><a href="../Pages/testimonios.html">Testimonios</a></li>
-          <li><a href="../Pages/contacto.html">Contacto</a></li> 
-          <li><a href="Ejemploderegistrarse">Registrarse</a></li>
-           <li><a href="Ejemplodeiniciarsesion">Iniciar sesión</a></li>  </nav> </ul></header>
- <main> <div class="imagen-fondo-productos"> <img src="../Img/Producto 1.jpg" alt="Imagen de fondo productos">
-</div> <div class="contenedor-productos"> 
-    <h1>Nuestros productos</h1> <ul class="opciones-productos">
-             <li><a href="Ejemploropademujer">Ropa de mujer</a></li> <li><a href="Ejemploropadehombre">Ropa de hombre</a></li> 
-             <li><a href="Ejemplodeaccesorios">Accesorios</a></li>  </div> </main>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../Img/logoImagen.png" alt="Logo" width="30" height="30">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/testimonios.html">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Ejemploderegistrarse">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Ejemplodeiniciarsesion">Iniciar sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-             <footer> 
-                <ul> <li> <h2>Información general</h2> <ul>
-                <li><a href="../index.html">Inicio</a></li> 
-                <li><a href="../Pages/productos.html">Productos</a></li> 
-                <li><a href="../Pages/sobrenosotros.html">Sobre nosotros</a></li> 
-                <li><a href="../Pages/testimonios.html">Testimonios</a></li> 
-                <li><a href="../Pages/contacto.html">Contacto</a></li> </ul></li> 
-                <li> <h2>Redes</h2> 
-                <ul> <li><a href="EjemploInstagram">Instagram</a></li> 
-                <li><a href="EjemploFacebook">Facebook</a></li>
-                <li><a href="EjemploTwitter">Twitter</a></li> </ul>
-                </li> <li> <h2>Suscribite</h2> <ul>
-                <li><a href="EjemploBoletines">Boletines</a></li> 
-                <li><a href="EjemploNovedades">Novedades</a></li>
-                <li><a href="EjemploOfertasEspeciales">Ofertas especiales</a></li> 
-                <li><a href="EjemploPromociones">Promociones</a></li> </ul> </li>
-                <li> <h2>Suscribirse</h2> 
-                <p>Únete a nuestro boletín para recibir novedades y lanzamientos.</p> 
-                <form> <input type="email" placeholder="Correo electrónico"> 
-                <button>Enviar</button> </form> </li> </ul>  
-                </footer>
+    <main class="container mt-4">
+        <div class="imagen-fondo-productos text-center">
+            <img src="../Img/producto1.png" alt="Imagen de fondo productos" class="img-fluid">
+        </div>
+        <div class="contenedor-productos mt-4">
+            <h1 class="text-center">Nuestros productos</h1>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-center"><a href="../Pages/productos.html">Ropa de mujer</a></li>
+                <li class="list-group-item text-center"><a href="../Pages/productos.html">Ropa de hombre</a></li>
+                <li class="list-group-item text-center"><a href="../Pages/productos.html">Accesorios</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="bg-light text-dark mt-5 p-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Información general</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../Pages/productos.html">Productos</a></li>
+                        <li><a href="../Pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="../Pages/testimonios.html">Testimonios</a></li>
+                        <li><a href="../Pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Redes</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="EjemploInstagram">Instagram</a></li>
+                        <li><a href="EjemploFacebook">Facebook</a></li>
+                        <li><a href="EjemploTwitter">Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Suscribite</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="EjemploBoletines">Boletines</a></li>
+                        <li><a href="EjemploNovedades">Novedades</a></li>
+                        <li><a href="EjemploOfertasEspeciales">Ofertas especiales</a></li>
+                        <li><a href="EjemploPromociones">Promociones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Suscribirse</h5>
+                    <p>Únete a nuestro boletín para recibir novedades y lanzamientos.</p>
+                    <form>
+                        <input type="email" placeholder="Correo electrónico" class="form-control mb-2">
+                        <button class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
