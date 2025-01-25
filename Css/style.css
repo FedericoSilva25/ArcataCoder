@@ -4,24 +4,25 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f2f8fc; /* Fondo pastel azul claro */
 }
 
 /* Header */
 header {
-    background-color: #f8f9fa;
+    background-color: #e1f2fb; /* Fondo azul pastel */
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .navbar-brand {
-    color: #333;
+    color: #4d94ff; /* Azul más fuerte para el logo */
     font-weight: bold;
 }
 .nav-link {
-    color: #555;
+    color: #6c9ecf; /* Azul pastel suave para los enlaces */
     transition: color 0.3s;
 }
 .nav-link:hover {
-    color: #007bff;
+    color: #4d94ff; /* Azul fuerte en hover */
 }
 
 /* Main */
@@ -36,7 +37,7 @@ main {
 }
 h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #4d94ff; /* Azul fuerte */
     margin-bottom: 15px;
 }
 p {
@@ -45,7 +46,7 @@ p {
     margin-bottom: 20px;
 }
 .boton-productos {
-    background-color: #007bff;
+    background-color: #4d94ff; /* Azul claro para botones */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -53,19 +54,19 @@ p {
     transition: background-color 0.3s;
 }
 .boton-productos:hover {
-    background-color: #0056b3;
+    background-color: #0062cc; /* Azul oscuro en hover */
 }
 
 /* Footer */
 footer {
-    background-color: #f8f9fa;
+    background-color: #e1f2fb; /* Fondo azul pastel */
     padding: 20px 0;
     color: #333;
 }
 footer h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #007bff;
+    color: #4d94ff; /* Azul fuerte */
 }
 footer ul {
     list-style: none;
@@ -76,22 +77,59 @@ footer ul li {
 }
 footer ul li a {
     text-decoration: none;
-    color: #555;
+    color: #6c9ecf; /* Azul pastel suave */
     transition: color 0.3s;
 }
 footer ul li a:hover {
-    color: #007bff;
+    color: #4d94ff; /* Azul fuerte en hover */
 }
 
 /* Responsividad */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+    .boton-productos {
+        padding: 9px 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        font-size: 1rem; /* Ajuste de tamaño de texto en pantallas medianas */
+    }
+    .boton-productos {
+        padding: 8px 15px;
+    }
+}
+
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     p {
         font-size: 1rem;
     }
     .boton-productos {
-        padding: 8px 15px;
+        padding: 8px 12px;
+    }
+    .navbar-brand img {
+        width: 40px; /* Ajuste del logo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+    .navbar-nav {
+        font-size: 0.9rem;
+    }
+    .boton-productos {
+        width: 100%; /* Botón a todo el ancho en pantallas muy pequeñas */
+        padding: 10px 0;
     }
 }
