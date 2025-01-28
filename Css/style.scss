@@ -1,0 +1,196 @@
+@import 'variables';
+
+// Mixins
+@mixin transition($property, $time) {
+  transition: $property $time;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+}
+
+// Header
+header {
+  background-color: $light-color;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px $shadow-color;
+
+  .navbar-brand {
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: $secondary-color;
+    @include transition(color, 0.3s);
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Main
+main {
+  text-align: center;
+  padding: 20px;
+
+  .imagen-fondo {
+    background-image: url('../Img/logoLetras.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      display: none;
+    }
+  }
+
+  .contenedor-texto {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: darken($secondary-color, 20%);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .boton-productos {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    @include transition(background-color, 0.3s);
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Footer
+footer {
+  background-color: $light-color;
+  padding: 20px 0;
+  color: $text-color;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        @include transition(color, 0.3s);
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Responsividad
+@include responsive(1200px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  .boton-productos {
+    padding: 9px 18px;
+  }
+}
+
+@include responsive(992px) {
+  .navbar-nav {
+    font-size: 1rem;
+  }
+  .boton-productos {
+    padding: 8px 15px;
+  }
+}
+
+@include responsive(768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .boton-productos {
+    padding: 8px 12px;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+}
+
+@include responsive(576px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .navbar-nav {
+    font-size: 0.9rem;
+    text-align: center;
+
+    li {
+      margin: 5px 0;
+    }
+  }
+
+  .boton-productos {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+// Carousel
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+}
