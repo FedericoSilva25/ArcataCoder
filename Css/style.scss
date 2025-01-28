@@ -1,5 +1,11 @@
 @import 'variables';
 
+@font-face {
+  font-family: 'montserrat', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Mixins
 @mixin transition($property, $time) {
   transition: $property $time;
@@ -16,10 +22,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'montserrat';
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'montserrat', Arial, sans-serif;
   background-color: $background-color;
 }
 
