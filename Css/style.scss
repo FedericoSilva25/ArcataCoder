@@ -1,36 +1,36 @@
 @import 'variables';
 
-@font-face {
-  font-family: 'montserrat', sans-serif;
-  font-weight: normal;
-  font-style: normal;
-}
 
-// Mixins
 @mixin transition($property, $time) {
   transition: $property $time;
 }
 
-@mixin responsive($breakpoint) {
-  @media (max-width: $breakpoint) {
-    @content;
+@mixin button-styles($bg-color, $hover-bg-color, $padding: 10px 20px) {
+  background-color: $bg-color;
+  color: white;
+  padding: $padding;
+  text-decoration: none;
+  border-radius: 5px;
+  @include transition(background-color, 0.3s);
+
+  &:hover {
+    background-color: $hover-bg-color;
   }
 }
 
-// Global styles
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'montserrat';
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 body {
-  font-family: 'montserrat', Arial, sans-serif;
   background-color: $background-color;
 }
 
-// Header
+
 header {
   background-color: $light-color;
   padding: 10px 0;
@@ -51,13 +51,13 @@ header {
   }
 }
 
-// Main
+
 main {
   text-align: center;
   padding: 20px;
 
   .imagen-fondo {
-    background-image: url('../Img/logoLetras.png');
+    background-image: url("../Img/logoLetras.png");
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -83,29 +83,30 @@ main {
     font-size: 2.5rem;
     color: $primary-color;
     margin-bottom: 15px;
+
+    @media (max-width: $breakpoint-lg) {
+      font-size: 2.2rem;
+    }
+    @media (max-width: $breakpoint-sm) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: $breakpoint-xs) {
+      font-size: 1.6rem;
+    }
   }
 
   p {
-    color: darken($secondary-color, 20%);
+    color: $secondary-dark;
     font-size: 1.2rem;
     margin-bottom: 20px;
   }
 
   .boton-productos {
-    background-color: $primary-color;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    @include transition(background-color, 0.3s);
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
-    }
+    @include button-styles($primary-color, $primary-hover);
   }
 }
 
-// Footer
+
 footer {
   background-color: $light-color;
   padding: 20px 0;
@@ -137,67 +138,9 @@ footer {
   }
 }
 
-// Responsividad
-@include responsive(1200px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  p {
-    font-size: 1.1rem;
-  }
-  .boton-productos {
-    padding: 9px 18px;
-  }
-}
-
-@include responsive(992px) {
-  .navbar-nav {
-    font-size: 1rem;
-  }
-  .boton-productos {
-    padding: 8px 15px;
-  }
-}
-
-@include responsive(768px) {
-  h1 {
-    font-size: 1.8rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .boton-productos {
-    padding: 8px 12px;
-  }
-
-  .navbar-brand img {
-    width: 40px;
-  }
-}
-
-@include responsive(576px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .navbar-nav {
-    font-size: 0.9rem;
-    text-align: center;
-
-    li {
-      margin: 5px 0;
-    }
-  }
-
-  .boton-productos {
-    width: 100%;
-    padding: 10px 0;
-  }
-}
-
-// Carousel
 .carousel-item img {
   width: 100%;
-  height: 500px;
+  height: auto;
+  max-height: 500px;
   object-fit: contain;
 }
