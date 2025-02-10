@@ -7,7 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -19,27 +19,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Pages/productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Pages/sobrenosotros.html">Sobre nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Pages/testimonios.html">Testimonios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Pages/contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Ejemploderegistrarse">Registrarse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Ejemplodeiniciarsesion">Iniciar sesión</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/testimonios.html">Testimonios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,38 +31,45 @@
     </header>
 
     <main>
-        <div class="imagen-fondo">
-            <img src="./Img/logoLetras.png" alt="Logo" class="img-fluid">
-        </div>
-        <div class="contenedor-texto text-center my-4">
-            <h1>Descubre nuestras colecciones impresionates</h1>
-            <p>Sumérgete en la moda con nuestras nuevas colecciones que reflejan estilo y calidad.</p>
-            <a href="./Pages/productos.html" class="btn btn-primary">Productos</a>
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <!-- Imagen del logo -->
+                <div class="col-md-6 text-center">
+                    <img src="./img/logoLetras.png" alt="Logo" class="img-fluid" style="max-width: 100%; height: auto;">
+                </div>
+                
+                <!-- Texto y botón -->
+                <div class="col-md-6 text-center">
+                    <h1>Descubre nuestras colecciones impresionantes</h1>
+                    <p>Sumérgete en la moda con nuestras nuevas colecciones que reflejan estilo y calidad.</p>
+                    <a href="./pages/productos.html" class="btn btn-primary">Ver Productos</a>
+                </div>
+            </div>
         </div>
     </main>
 
     <footer class="bg-light py-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <h2>Información general</h2>
                     <ul class="list-unstyled">
                         <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="./Pages/productos.html">Productos</a></li>
-                        <li><a href="./Pages/sobrenosotros.html">Sobre nosotros</a></li>
-                        <li><a href="./Pages/testimonios.html">Testimonios</a></li>
-                        <li><a href="./Pages/contacto.html">Contacto</a></li>
+                        <li><a href="./pages/productos.html">Productos</a></li>
+                        <li><a href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
+                        <li><a href="./pages/testimonios.html">Testimonios</a></li>
+                        <li><a href="./pages/contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <h2>Redes</h2>
                     <ul class="list-unstyled">
-                        <li><a href="EjemploInstagram">Instagram</a></li>
-                        <li><a href="EjemploFacebook">Facebook</a></li>
-                        <li><a href="EjemploTwitter">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <h2>Suscribite</h2>
                     <p>Únete a nuestro boletín para recibir novedades y lanzamientos.</p>
                     <form>
